@@ -19,14 +19,14 @@ trait FPTwoInjects extends Simulation {
     //Steps. To count max intensity by chairs
     setUp(firstScenario.inject(constantUsersPerSec(120) during(80 minutes)).
            throttle(
-             jumpToRps(15) ,  holdFor (10 minutes),
-             jumpToRps(30) ,  holdFor (10 minutes),
-             jumpToRps(45)  , holdFor (10 minutes),
-             jumpToRps(60)  , holdFor (10 minutes),
-             jumpToRps(75)  , holdFor (10 minutes),
-             jumpToRps(90)  , holdFor (10 minutes),
-             jumpToRps(105) , holdFor (10 minutes),
-             jumpToRps(120) , holdFor (10 minutes),
+             reachRps(45)  in (1 minutes), holdFor (10 minutes),
+             reachRps(90)  in (1 minutes), holdFor (10 minutes),
+             reachRps(135) in (1 minutes), holdFor (10 minutes),
+             reachRps(180) in (1 minutes), holdFor (10 minutes),
+             reachRps(225) in (1 minutes), holdFor (10 minutes),
+             reachRps(265) in (1 minutes), holdFor (10 minutes),
+             reachRps(310) in (1 minutes), holdFor (10 minutes),
+             reachRps(355) in (1 minutes), holdFor (10 minutes),
            ).protocols(httpProtocol),
            ).maxDuration(80 minutes) //Мааксимальное время до выполения всего скрипта?
      }
