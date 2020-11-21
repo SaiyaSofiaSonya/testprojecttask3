@@ -17,18 +17,28 @@ trait FPTwoInjects extends Simulation {
         ).maxDuration(65 minutes)*/
 
     //Steps. To count max intensity by chairs
-    setUp(firstScenario.inject(constantUsersPerSec(355) during(80 minutes)).
+    setUp(firstScenario.inject(constantUsersPerSec(380) during(180 minutes)).
            throttle(
-             reachRps(45)  in (1 minutes), holdFor (10 minutes),
-             reachRps(90)  in (1 minutes), holdFor (10 minutes),
-             reachRps(135) in (1 minutes), holdFor (10 minutes),
+             reachRps(20)  in (1 minutes), holdFor (10 minutes),
+             reachRps(40)  in (1 minutes), holdFor (10 minutes),
+             reachRps(60)  in (1 minutes), holdFor (10 minutes),
+             reachRps(80)  in (1 minutes), holdFor (10 minutes),
+             reachRps(100) in (1 minutes), holdFor (10 minutes),
+             reachRps(120) in (1 minutes), holdFor (10 minutes),
+             reachRps(140) in (1 minutes), holdFor (10 minutes),
+             reachRps(160) in (1 minutes), holdFor (10 minutes),
              reachRps(180) in (1 minutes), holdFor (10 minutes),
-             reachRps(225) in (1 minutes), holdFor (10 minutes),
-             reachRps(265) in (1 minutes), holdFor (10 minutes),
-             reachRps(310) in (1 minutes), holdFor (10 minutes),
-             reachRps(355) in (1 minutes), holdFor (11 minutes),
+             reachRps(200) in (1 minutes), holdFor (10 minutes),
+             reachRps(220) in (1 minutes), holdFor (10 minutes),
+             reachRps(260) in (1 minutes), holdFor (10 minutes),
+             reachRps(280) in (1 minutes), holdFor (10 minutes),
+             reachRps(300) in (1 minutes), holdFor (10 minutes),
+             reachRps(320) in (1 minutes), holdFor (10 minutes),
+             reachRps(340) in (1 minutes), holdFor (10 minutes),
+             reachRps(360) in (1 minutes), holdFor (10 minutes),
+             reachRps(380) in (1 minutes), holdFor (10 minutes)
            ).protocols(httpProtocol),
-           ).maxDuration(80 minutes) //Мааксимальное время до выполения всего скрипта?
+           ).maxDuration(180 minutes) //Мааксимальное время до выполения всего скрипта?
      }
 // Расчет максимального для нецелых значений
       /*
