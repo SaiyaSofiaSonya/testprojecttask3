@@ -17,7 +17,7 @@ trait FPTwoInjects extends Simulation {
         ).maxDuration(65 minutes)*/
 
     //Steps. To count max intensity by chairs
-    setUp(firstScenario.inject(constantUsersPerSec(120) during(80 minutes)).
+    setUp(firstScenario.inject(constantUsersPerSec(355) during(80 minutes)).
            throttle(
              reachRps(45)  in (1 minutes), holdFor (10 minutes),
              reachRps(90)  in (1 minutes), holdFor (10 minutes),
