@@ -36,7 +36,7 @@ trait FPTwoInjects extends Simulation {
              reachRps(320) in (1 minutes), holdFor (10 minutes),
              reachRps(340) in (1 minutes), holdFor (10 minutes),
              reachRps(360) in (1 minutes), holdFor (10 minutes),
-             reachRps(380) in (1 minutes), holdFor (10 minutes)
+             reachRps(380) in (1 minutes), holdFor (11 minutes)
            ).protocols(httpProtocol),
            ).maxDuration(180 minutes) //Мааксимальное время до выполения всего скрипта?
      }
